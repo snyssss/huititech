@@ -1,0 +1,373 @@
+.app_1 {
+    overflow: hidden;
+
+    height: calc(100vh);
+
+    color: #fff;
+    background-color: #ff6c00;
+    @media only screen and (min-width: 768px) {
+        height: calc(50vh);
+        min-height: 600px;
+    }
+    .mainBox {
+        height: 100%;
+        .main {
+            flex-direction: column;
+
+            height: 100%;
+
+            align-items: center;
+            @media only screen and (min-width: 768px) {
+                flex-direction: row;
+            }
+            .imageBox {
+                position: relative;
+
+                display: none;
+                overflow: hidden;
+
+                width: 100%;
+                height: 100%;
+                @media only screen and (min-width: 768px) {
+                    display: flex;
+                    flex: 2;
+                }
+                figure {
+                    position: absolute;
+
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: contain;
+                }
+            }
+            .contentBox {
+                display: flex;
+                flex-direction: column;
+                flex: 3;
+
+                justify-content: center;
+                .content {
+                    padding: 0 10px;
+
+                    line-height: 1.2;
+                    @media only screen and (min-width: 768px) {
+                        padding: 0;
+                    }
+                    h1 {
+                        margin: 0;
+
+                        font-size: 42px;
+                        font-weight: 500;
+                        line-height: 1;
+                        @media only screen and (min-width: 768px) {
+                            font-size: 60px;
+                        }
+                    }
+                    h2,
+                    p {
+                        margin: .5em 0 0;
+
+                        font-size: 18px;
+                        @media only screen and (min-width: 768px) {
+                            font-size: 24px;
+                        }
+                    }
+                    h2 {
+                        margin-bottom: 1.5em;
+
+                        font-weight: 400;
+                    }
+                }
+            }
+            .extraBox {
+                display: flex;
+
+                margin-top: 40px;
+                padding: 0 10px;
+
+                justify-content: space-around;
+                @media only screen and (min-width: 768px) {
+                    margin-top: 80px;
+                    padding: 0;
+
+                    justify-content: flex-start;
+                }
+                .left {
+                    display: flex;
+                    flex-direction: column;
+
+                    padding-top: 30px;
+
+                    justify-content: space-between;
+                }
+                .right {
+                    margin-left: 40px;
+
+                    font-size: 18px;
+                    @media only screen and (min-width: 768px) {
+                        margin-left: 80px;
+                    }
+                    p {
+                        margin: 0 0 10px;
+                    }
+                    figure {
+                        width: 130px;
+                        height: 130px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.app_2 {
+    overflow: hidden;
+
+    height: calc(100vh);
+    min-height: 400px;
+
+    color: #333;
+    background-color: #fff;
+    @media only screen and (min-width: 768px) {
+        height: calc(50vh);
+    }
+    .mainBox {
+        height: 100%;
+        .main {
+            flex-direction: column;
+
+            height: 100%;
+
+            align-items: center;
+            @media only screen and (min-width: 768px) {
+                flex-direction: row;
+            }
+            .contentBox {
+                display: flex;
+
+                justify-content: center;
+                align-items: center;
+                order: -10;
+                @media only screen and (min-width: 768px) {
+                    order: 0;
+                }
+                .content {
+                    display: inline-block;
+
+                    padding: 0 10px;
+
+                    line-height: 1.2;
+                    h1 {
+                        margin: 0 0 1em;
+
+                        font-size: 24px;
+                        font-weight: 500;
+                        @media only screen and (min-width: 768px) {
+                            font-size: 36px;
+                        }
+                    }
+                    p {
+                        margin: 1em 0 0;
+
+                        font-size: 14px;
+                        @media only screen and (min-width: 768px) {
+                            font-size: 18px;
+                        }
+                        strong {
+                            margin-right: .5em;
+
+                            font-size: 18px;
+                            font-weight: 500;
+                            @media only screen and (min-width: 768px) {
+                                margin-right: 1em;
+
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+            .imageBox {
+                position: relative;
+
+                overflow: hidden;
+
+                width: 100%;
+                height: 100%;
+
+                order: 1;
+                figure {
+                    position: absolute;
+
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+}
+
+.app_3 {
+    color: #fff;
+    background-color: #ff6c00;
+
+    @extend .app_2;
+    .imageBox {
+        order: -1 !important;
+    }
+}
+
+.app_4 {
+    color: #333;
+    background-color: #fff;
+
+    @extend .app_2;
+    .imageBox {
+        order: 1 !important;
+    }
+}
+
+.app_5 {
+    overflow: hidden;
+
+    height: calc(100vh);
+    min-height: 400px;
+
+    color: #fff;
+    background-color: #ff6c00;
+    @media only screen and (min-width: 768px) {
+        height: calc(50vh);
+    }
+    .mainBox {
+        height: 100%;
+        .main {
+            flex-direction: column;
+
+            height: 100%;
+
+            align-items: center;
+            .contentBox {
+                display: flex;
+                flex: 2;
+
+                justify-content: center;
+                align-items: center;
+                order: -10;
+                @media only screen and (min-width: 768px) {
+                    order: 0;
+                }
+                .content {
+                    display: inline-block;
+
+                    padding: 0 10px;
+
+                    line-height: 1.2;
+                    h1 {
+                        float: left;
+
+                        width: calc(50% - .5em);
+                        margin: 0 0 1em;
+                        padding-left: .5em;
+
+                        text-align: left;
+
+                        font-size: 24px;
+                        font-weight: 500;
+                        @media only screen and (min-width: 768px) {
+                            width: calc(50% - 1em);
+                            padding-left: 1em;
+
+                            font-size: 36px;
+                        }
+                        &:first-child {
+                            padding-right: .5em;
+                            padding-left: 0;
+
+                            text-align: right;
+                            @media only screen and (min-width: 768px) {
+                                padding-right: 1em;
+                            }
+                        }
+                    }
+                    p {
+                        margin: 1em 0 0;
+
+                        font-size: 14px;
+                        @media only screen and (min-width: 768px) {
+                            font-size: 18px;
+                        }
+                        strong {
+                            margin-right: .5em;
+
+                            font-size: 18px;
+                            font-weight: 500;
+                            @media only screen and (min-width: 768px) {
+                                margin-right: 1em;
+
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+            .imageBox {
+                display: none;
+                overflow: hidden;
+                flex: 3;
+
+                width: 100%;
+
+                order: 1;
+                @media only screen and (min-width: 768px) {
+                    display: flex;
+                }
+                .img {
+                    position: relative;
+
+                    flex: 1;
+                    .info {
+                        position: absolute;
+                        right: 20px;
+                        left: 20px;
+                        p {
+                            text-align: center;
+
+                            font-size: 14px;
+                        }
+                    }
+                    figure {
+                        position: absolute;
+
+                        width: 100%;
+                        height: 100%;
+                        margin: 0;
+
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        background-size: contain;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.app_6 {
+    color: #333;
+    background-color: #fff;
+
+    @extend .app_2;
+    .imageBox {
+        order: -1 !important;
+    }
+}

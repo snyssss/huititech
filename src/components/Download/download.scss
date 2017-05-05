@@ -1,0 +1,69 @@
+$boxShadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+.list {
+    overflow: hidden;
+
+    margin: 20px auto;
+
+    background-color: #fff;
+    box-shadow: $boxShadow;
+    @media only screen and (min-width: 768px) {
+        border-radius: 4px;
+    }
+    .item {
+        margin-top: -1px;
+
+        padding: 40px 30px;
+
+        border-top: 1px solid #d8d8d8;
+        .main {
+            position: relative;
+
+            padding-left: 100px;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 72px;
+                height: 72px;
+            }
+            h1 {
+                margin: 0 0 1em;
+
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 1;
+                @media only screen and (min-width: 768px) {
+                    margin-bottom: .5em;
+
+                    font-size: 24px;
+                }
+            }
+        }
+        .description {
+            margin-top: 40px;
+
+            color: #333;
+
+            font-size: 14px;
+            line-height: 20px;
+            p {
+                margin: 0 0 12px;
+            }
+            ul {
+                margin: 10px 0 10px 2em;
+                padding: 0;
+
+                list-style: square outside;
+            }
+        }
+        .extra {
+            color: #666;
+
+            @extend .description;
+            p {
+                margin: 0;
+            }
+        }
+    }
+}

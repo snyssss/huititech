@@ -1,0 +1,41 @@
+$border: 2px solid #fff;
+
+.row {
+    margin: 0;
+
+    border-bottom: $border;
+    &>div {
+        padding: 0;
+    }
+    @media only screen and (min-width: 75em) {
+        &>div {
+            max-width: 100%;
+
+            -webkit-box-flex: 1;
+            -webkit-flex-grow: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            -webkit-flex-basis: 0;
+            -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+        }
+    }
+}
+
+.link {
+    display: block;
+
+    height: 200px;
+
+    text-indent: -99999em;
+
+    border-top: $border;
+    border-right: $border;
+    background-color: #f2f2f2;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 100%;
+    &:hover {
+        background-color: #fafafa;
+    }
+}
